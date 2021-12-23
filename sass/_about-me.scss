@@ -1,0 +1,153 @@
+.about-me {
+  position: relative;
+
+  &::before {
+    // Background line
+    content: url(../img/about-me-line-1.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-55%, -30%);
+
+    @media only screen and (min-width: $bp-small-2) {
+      transform: translate(-50%, -45%);
+    }
+
+    @media only screen and (min-width: $bp-medium) {
+      content: url(../img/about-me-line-2.svg);
+      transform: translate(-50%, -63.5%);
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      content: url(../img/about-me-line-3.svg);
+      transform: translate(-50%, -50.5%);
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      content: url(../img/about-me-line-4.svg);
+      transform: translate(-50%, -54%);
+    }
+  }
+}
+
+.profile {
+  margin: 1rem 1rem 2.5rem;
+  padding: 1rem;
+  max-width: 30.5rem;
+  border-radius: 1.5rem;
+  background-color: $background-color-400;
+
+  @media only screen and (min-width: $bp-medium-1) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    margin-bottom: 4rem;
+    padding: 1.7rem;
+    max-width: 37.5rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    max-width: 44rem;
+  }
+
+  &__img {
+    margin-left: 0.2rem;
+    width: 8.5rem;
+    border-radius: 50rem;
+    float: right;    
+
+
+    @media only screen and (min-width: $bp-medium) {
+      width: 10.9rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.875rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      // font-size: 0.94rem;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      font-size: 0.94rem;
+    }
+  }
+}
+
+.skills {
+  margin: 0 1rem 1.6rem;
+  padding: 1rem;
+  max-width: 30.5rem;
+  border-radius: 1.5rem;
+  background-color: $background-color-400;
+
+  @media only screen and (min-width: $bp-medium-1) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    max-width: 37.5rem;
+    padding: 1.7rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    max-width: 44rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    margin-top: -0.5rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 2.3rem;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      gap: 2rem;
+      font-size: 0.94rem;
+    }
+  
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+  
+    .fab {
+      font-size: 2.8rem;
+      color: rgba($text-color, 0.55);
+
+      @media only screen and (min-width: $bp-medium) {
+        font-size: 4rem;
+      }
+    }
+  
+    .skills__svg svg {
+      width: 2.8rem;
+      vertical-align: middle;
+      fill: rgba($text-color, 0.55);
+
+      @media only screen and (min-width: $bp-medium) {
+        width: 4rem;
+      }
+    }
+  }
+}

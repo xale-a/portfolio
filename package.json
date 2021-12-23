@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "Personal portfolio website.",
+  "main": "index.js",
+  "author": "Aleksa Nikolić",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "watch-sass": "sass ./sass/main.scss ./css/style.css --watch",
+    "five-server": "five-server --port=8080",
+    "dev": "run-p watch-sass five-server",
+    "compile-sass": "sass sass/main.scss css/style.comp.css",
+    "prefix-css": "postcss -u autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress-css": "sass css/style.prefix.css css/style.css --style=compressed",
+    "clean-up": "del-cli css/style.comp.css css/style.comp.css.map css/style.prefix.css css/style.css.map",
+    "build": "run-s compile-sass prefix-css compress-css clean-up"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "del-cli": "^4.0.1",
+    "five-server": "^0.0.29",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1",
+    "sass": "^1.43.2"
+  }
+}

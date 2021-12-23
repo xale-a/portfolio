@@ -1,0 +1,163 @@
+.get-in-touch {
+  position: relative;
+
+  &::before {
+    // Background line
+    content: url(../img/get-in-touch-line-1.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-47%, -27%);
+
+    @media only screen and (min-width: $bp-medium) {
+      content: url(../img/get-in-touch-line-2.svg);
+      transform: translate(-46%, -20%);
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      content: url(../img/get-in-touch-line-3.svg);
+      transform: translate(-45%, -58%);
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      content: url(../img/get-in-touch-line-4.svg);
+      transform: translate(-60%, -56%);
+    }
+  }
+
+  &__illustration {
+    display: block;
+    margin: 0 auto 6rem;
+    width: 18.75rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      width: 26.75rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      width: 22.93rem;
+      margin-left: 60%;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      width: 26.75rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0 1.2rem;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $bp-medium) {
+      gap: 1.5rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      gap: 1.2rem;
+      margin-bottom: 7rem;
+      margin-left: -9rem;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      margin-left: -18.5rem;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+
+      @media only screen and (min-width: $bp-medium) {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 10rem;
+
+      @media only screen and (min-width: $bp-medium) {
+        margin-bottom: 5.5rem;
+
+      }
+    }
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $text-color;
+      font-size: 1.15rem;
+
+      @media only screen and (min-width: $bp-medium) {
+        font-size: 1.375rem;
+      }
+
+      @media only screen and (min-width: $bp-large) {
+        font-size: 1.25rem;
+      }
+
+      @media only screen and (min-width: $bp-very-large) {
+        font-size: 1.375rem;
+      }
+    }
+
+    &--email {
+      svg {
+        width: 3.6rem;
+        fill: rgba($text-color, 0.55);
+
+        @media only screen and (min-width: $bp-medium) {
+          width: 4rem;
+        }
+      }
+    }
+
+    &--git-hub {
+      i {
+        font-size: 3.6rem;
+        color: rgba($text-color, 0.55);
+
+        @media only screen and (min-width: $bp-medium) {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 3.6rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-top: 1px solid rgba($text-color, 0.55);
+  width: 16rem;
+  text-align: center;
+  color: rgba($text-color, 0.55);
+
+  @media only screen and (min-width: $bp-medium) {
+    bottom: 6.4rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    bottom: 1rem;
+  }
+
+  &__shout-out {
+    margin-top: 0.1rem;
+    font-size: 0.875rem;
+
+    a:link,
+    a:visited {
+      color: currentColor;
+      text-underline-offset: 1px;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.8rem;
+  }
+}

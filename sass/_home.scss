@@ -1,0 +1,170 @@
+.home {
+  // --bottom: 8.3rem;
+  --bottom: 6rem;
+  position: relative;
+  padding-left: 2.2rem;
+
+  &::before {
+    // Background line
+    content: url(../img/home-line-1.svg);
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    left: 50vw;
+    width: 22rem; //? Check
+    transform: translate(-50%, -16.2rem);
+
+    @media only screen and (min-width: $bp-medium) {
+      content: url(../img/home-line-2.svg);
+      transform: translate(-87%, -17.5rem);
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      content: url(../img/home-line-3.svg);
+      transform: translate(-87%, -17.5rem);
+      width: unset; //? Check
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      content: url(../img/home-line-4.svg);
+      transform: translate(-87%, -49%);
+    }
+  }
+}
+
+.hero {
+  margin: 0 auto;
+  max-width: 20.7rem;
+
+  @media only screen and (min-width: $bp-medium) {
+    max-width: 28rem;
+    transform: translateX(-1rem);
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    max-width: 34.75rem;
+    margin-right: 20%;
+    transform: unset;
+  }
+
+  @media only screen and (min-width: $bp-very-large) {
+    min-width: 37.6rem;
+    margin-right: 22%;
+  }
+
+  &__illustration {
+    margin-bottom: 5rem;
+    width: 18.5rem;
+  
+    @media only screen and (min-width: $bp-medium) {
+      margin-bottom: 7.5rem;
+      width: 27rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      margin-bottom: 3rem;
+      width: 24rem;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      width: 30.1rem;
+    }
+  }
+}
+
+.heading {
+  margin-bottom: calc(var(--bottom) - 1.7rem);
+  
+  &__sub-heading {
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+
+    @media only screen and (min-width: $bp-medium) {
+      margin-bottom: 0rem;
+      font-size: 1.375rem;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__main {
+    font-size: 3.7rem;
+    line-height: 1.25;
+
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 4.875rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      font-size: 4.5rem;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      font-size: 4.875rem;
+    }
+  }
+
+  &__ideas {
+    color: $accent-color;
+  }
+
+  &__reality {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: url('../img/reality-underline-1.svg');
+      position: absolute;
+      bottom: -1.6rem;
+      left: 0;
+      right: 1rem;
+      z-index: -1;
+
+      @media only screen and (min-width: $bp-medium) {
+        content: url('../img/reality-underline-2.svg');
+      }
+
+      @media only screen and (min-width: $bp-large) {
+        content: url('../img/reality-underline-3.svg');
+      }
+
+      @media only screen and (min-width: $bp-very-large) {
+        content: url('../img/reality-underline-4.svg');
+      }
+    }
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  right: -1rem;
+  bottom: 6.7rem;
+  display: inline-block;
+  border-bottom: 1px solid $text-color;
+  padding-right: 1rem;
+  transform: rotate(-90deg);
+
+  @media only screen and (min-width: $bp-medium) {
+    bottom: 9.5rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    bottom: 5.5rem;
+  }
+
+  @media only screen and (min-width: $bp-very-large) {
+    right: 2rem;
+  }
+  
+  p {
+    font-size: 0.875rem;
+    text-transform: lowercase;
+
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 1.125rem;
+    }
+  }
+}
