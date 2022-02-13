@@ -3,7 +3,7 @@
 
   &::before {
     // Background line
-    content: url(../img/my-work-line-1.svg);
+    content: url(../img/lines/my-work-line-1.svg);
     position: absolute;
     top: 50%;
     right: -2rem;
@@ -12,18 +12,18 @@
     transform: translateY(-49%);
 
     @media only screen and (min-width: $bp-medium) {
-      content: url(../img/my-work-line-2.svg);
+      content: url(../img/lines/my-work-line-2.svg);
       width: unset;
       transform: translate(42%, -50%);
     }
 
     @media only screen and (min-width: $bp-large) {
-      content: url(../img/my-work-line-3.svg);
+      content: url(../img/lines/my-work-line-3.svg);
       transform: translate(33%, -52%);
     }
 
     @media only screen and (min-width: $bp-very-large) {
-      content: url(../img/my-work-line-4.svg);
+      content: url(../img/lines/my-work-line-4.svg);
       transform: translate(6%, -50%);
     }
   }
@@ -103,7 +103,6 @@
     // Modified in app--number
     width: 4.9rem;
     position: absolute;
-    top: -1.9rem; //? Check
     left: 50%;
     z-index: -10;
     transform: translateX(-50%);
@@ -238,7 +237,6 @@
       @media only screen and (min-width: $bp-large) {
         top: 50%;
         left: unset;
-        bottom: unset;
         right: 31%;
         transform: rotate(90deg) translate(-50%, 0);
       }
@@ -284,13 +282,12 @@
   
       @media only screen and (min-width: $bp-medium) {
         bottom: unset;
+        top: -1.9rem;
         transform: translateX(-50%);
       }
 
       @media only screen and (min-width: $bp-large) {
         top: 50%;
-        right: unset;
-        bottom: unset;
         left: 45%;
         transform: rotate(-90deg) translate(50%, 0);
       }
