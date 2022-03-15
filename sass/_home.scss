@@ -31,6 +31,7 @@
 .hero {
   margin: 0 auto;
   max-width: 20.7rem;
+  cursor: default;
 
   @media only screen and (min-width: $bp-medium) {
     max-width: 28rem;
@@ -51,7 +52,7 @@
   &__illustration {
     margin-bottom: 5rem;
     width: 18.5rem;
-  
+
     @media only screen and (min-width: $bp-medium) {
       margin-bottom: 7.5rem;
       width: 27rem;
@@ -70,7 +71,7 @@
 
 .heading {
   margin-bottom: 4.3rem;
-  
+
   &__sub-heading {
     margin-bottom: 0.3rem;
     font-size: 1.2rem;
@@ -85,7 +86,7 @@
       font-size: 1.5rem;
     }
   }
-  
+
   &__main {
     font-size: 3.7rem;
     line-height: 1.25;
@@ -135,9 +136,15 @@
 }
 
 @keyframes scroll {
-  from {transform: translate(0);}
-  50% {transform: translate(14%);}
-  to {transform: translate(0);}
+  from {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(14%);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 
 .scroll-down {
@@ -148,6 +155,7 @@
   border-bottom: 1px solid $text-color;
   padding-right: 1rem;
   transform: rotate(-90deg);
+  cursor: default;
 
   @media only screen and (min-width: $bp-medium) {
     bottom: 9.5rem;
@@ -160,12 +168,11 @@
   @media only screen and (min-width: $bp-very-large) {
     right: 2rem;
   }
-  
+
   p {
     font-size: 0.875rem;
     text-transform: lowercase;
     animation: scroll 3000ms infinite 1000ms;
-
 
     @media only screen and (min-width: $bp-medium) {
       font-size: 1.125rem;
