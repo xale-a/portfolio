@@ -22,12 +22,18 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5afd989ff3.js" crossorigin="anonymous"></script>
+  <!-- Fullpage.js -->
+  <script src="lib/fullPage/fullpage.min.js"></script>
+  <script src="lib/fullPage/scrolloverflow.min.js"></script>
+  <!-- Anime.js -->
+  <script src="lib/anime.min.js"></script>
   <!-- Javascript -->
-  <script src="lib/fullPage/fullpage.min.js" defer></script>
-  <script src="lib/fullPage/scrolloverflow.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div id="loading-overlay">
+    <span>Loading content...</span>
+  </div>
   <nav class="nav">
     <ul class="nav__list" id="menu">
       <li class="nav__item" data-menuanchor="home">

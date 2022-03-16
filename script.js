@@ -1,3 +1,4 @@
+// Fullpage initialization
 const fullPage = new fullpage('#fullpage', {
   licenseKey: 'Hi5!vfR&o1',
   anchors: ['home', 'myWork', 'aboutMe', 'getInTouch'],
@@ -5,6 +6,34 @@ const fullPage = new fullpage('#fullpage', {
   scrollOverflow: true,
 });
 
+// Loading overlay
+window.onload = () => {
+  const loadingOverlay = document.getElementById('loading-overlay');
+  
+  anime({
+    targets: loadingOverlay,
+    opacity: 0,
+    complete: () => {
+      loadingOverlay.style.display = 'none';
+    }
+  })
+
+  // "Scroll down" animation
+  setTimeout(() => {
+    anime({
+      targets: '.scroll-down p',
+      keyframes: [
+        { translateX: '14%' },
+        { translateX: 0 },
+      ],
+      duration: 3000,
+      loop: true,
+      easing: 'cubicBezier(0.25, 0.1, 0.25, 1)',
+    });
+  }, 1000);
+}
+
+// Apps overlay and tooltip
 const myWorkOverlay = document.getElementById('my-work__overlay');
 const app1 = document.getElementById('app-1');
 const app1Info = document.getElementById('app-1__info');
@@ -35,4 +64,5 @@ app3.addEventListener('click', () => {
   myWorkOverlay.classList.add('active');
 });
 
+// Auto-update copyright year
 document.getElementById('copyright-year').innerText = new Date().getFullYear();

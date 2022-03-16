@@ -135,18 +135,6 @@
   }
 }
 
-@keyframes scroll {
-  from {
-    transform: translate(0);
-  }
-  50% {
-    transform: translate(14%);
-  }
-  to {
-    transform: translate(0);
-  }
-}
-
 .scroll-down {
   position: absolute;
   right: -1rem;
@@ -172,7 +160,6 @@
   p {
     font-size: 0.875rem;
     text-transform: lowercase;
-    animation: scroll 3000ms infinite 1000ms;
 
     @media only screen and (min-width: $bp-medium) {
       font-size: 1.125rem;
