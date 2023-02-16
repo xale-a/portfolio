@@ -4,4 +4,4 @@ Site to introduce myself. Built using [fullPage.js](https://alvarotrigo.com/full
 
 ## Live version
 
-Visit live version on [GitHub Pages](https://xalea.dev/).
+Visit live version on [xalea.dev](https://xalea.dev/).
