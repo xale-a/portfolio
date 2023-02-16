@@ -1,0 +1,360 @@
+.my-work {
+  position: relative;
+
+  &::before {
+    // Background line
+    content: url(../img/my-work-line-1.svg);
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    width: 5.5rem;
+    z-index: -1;
+    transform: translateY(-49%);
+
+    @media only screen and (min-width: $bp-medium) {
+      content: url(../img/my-work-line-2.svg);
+      width: unset;
+      transform: translate(42%, -50%);
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      content: url(../img/my-work-line-3.svg);
+      transform: translate(33%, -52%);
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      content: url(../img/my-work-line-4.svg);
+      transform: translate(6%, -50%);
+    }
+  }
+
+  &__overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  
+    &.active {
+      display: block;
+
+      @media only screen and (min-width: $bp-large) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    @media only screen and (min-width: $bp-medium) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-left: -5rem;
+    }
+  }
+
+  .heading-secondary {
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 2.75rem;
+      margin-bottom: 3rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      display: none;
+    }
+  }
+}
+
+.app {
+  position: relative;
+
+  @media only screen and (min-width: $bp-large) {
+    display: flex;
+    gap: 2.2rem;
+  }
+
+  &__image {
+    display: block;
+    width: 14rem;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $bp-medium) {
+      width: 18.5rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      width: 14.95rem;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      width: 15.3rem;
+    }
+  }
+
+  &__arrow {
+    // Modified in app--number
+    width: 4.9rem;
+    position: absolute;
+    top: -1.9rem; //? Check
+    left: 50%;
+    z-index: -10;
+    transform: translateX(-50%);
+
+    & svg {
+      fill: $accent-color;
+
+      @media only screen and (min-width: $bp-large) {
+        fill: $background-color-400;
+      }
+    }
+  }
+
+  &__info {
+    // Modified in app--number
+    display: none;
+    position: relative;
+    z-index: 10;
+
+    @media only screen and (min-width: $bp-large) {
+      display: block;
+      position: unset;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+ .app-info {
+    // Modified in app--number
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0.7rem 1rem;
+    background-color: $background-color-400;
+    border-radius: 1.4rem;
+    border: 1px solid $accent-color;
+
+    @media only screen and (min-width: $bp-medium) {
+      left: -1.5rem;
+      right: -1.5rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      position: unset;
+      width: 21.6rem;
+      border: none;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      width: 26.2rem;
+      padding: 1.5rem 2rem;
+    }
+
+    &__name {
+      margin-bottom: -0.3rem;
+      font-size: 1.6rem;
+    }
+  
+    &__desc {
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      color: rgba($text-color, 0.6);
+
+      @media only screen and (min-width: $bp-very-large) {
+        margin-bottom: 2rem;
+      }
+    }
+  
+    &__technologies {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      line-height: 1;
+
+      @media only screen and (min-width: $bp-very-large) {
+        gap: 1rem;
+        font-size: 1.06rem;
+        margin-bottom: 2rem;
+      }
+    }
+  
+    &__links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+  
+    &__link {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      @media only screen and (min-width: $bp-very-large) {
+        gap: 0.7rem;
+      }
+  
+      svg {
+        // Modified in app--number
+        vertical-align: middle;
+      }
+  
+      &--live {
+        svg {
+          fill: rgba($text-color, 0.6);
+        }
+      }
+  
+      &--source {
+        svg {
+          width: 2.3rem;
+          fill: rgba($text-color, 0.55);
+        }
+      }
+    }
+  }
+
+  &--1 {
+    margin-top: 1.7rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      margin: 0;
+    }
+
+    .app__arrow {
+      top: -1.9rem;
+
+      @media only screen and (min-width: $bp-large) {
+        top: 50%;
+        left: unset;
+        bottom: unset;
+        right: 31%;
+        transform: rotate(90deg) translate(-50%, 0);
+      }
+
+      @media only screen and (min-width: $bp-very-large) {
+        top: 50%;
+        right: 17%;
+        transform: rotate(90deg) translate(-50%, 0);
+      }
+    }
+
+    .app__info {
+      top: 0.3rem;
+
+      @media only screen and (min-width: $bp-medium) {
+        top: 0.5rem;
+      }
+
+      @media only screen and (min-width: $bp-large) {
+        order: -1;
+      }
+    }
+
+    .app-info {
+      top: 100%;
+
+      .app-info__link--live svg {
+        width: 5.6rem;
+      }
+    }
+  }
+
+  &--2 {
+    margin-bottom: 1.7rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      margin: 0;
+    }
+
+    .app__arrow {
+      bottom: -1.9rem;
+      transform: translateX(-50%) rotate(180deg);
+  
+      @media only screen and (min-width: $bp-medium) {
+        bottom: unset;
+        transform: translateX(-50%);
+      }
+
+      @media only screen and (min-width: $bp-large) {
+        top: 50%;
+        right: unset;
+        bottom: unset;
+        left: 45%;
+        transform: rotate(-90deg) translate(50%, 0);
+      }
+    }
+
+    .app__info {
+      bottom: 13.5rem;
+
+      @media only screen and (min-width: $bp-medium) {
+        bottom: unset;
+        top: 0.5rem;
+      }
+    }
+
+    .app-info {
+      bottom: 100%;
+
+      @media only screen and (min-width: $bp-medium) {
+        bottom: unset;
+      }
+
+      .app-info__link--live svg {
+        width: 4.9rem;
+      }
+    }
+  }
+}
+
+.work-in-progress {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+
+  @media only screen and (min-width: $bp-medium) {
+    margin-top: 2rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  &__illustration {
+    width: 10rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      width: 13.8rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      width: 13.65rem;
+    }
+  }
+
+  &__text {
+    margin-left: -4rem;
+
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 1.375rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+:root {
+  --accent-color: #FF4C29;
+  --background-color: #082032;
+  --background-color-light: #2C394B;
+  --background-color-lighter: #334756;
+
+  --text-color: #EEEEEE;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+	position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+	z-index: 70;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  list-style: none;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.nav__item.active {
+  color: var(--accent-color);
+}
+
+.hero-img {
+  display: block;
+  margin-inline: auto;
+}
+
+.hero__line {
+  position: absolute;
+}
