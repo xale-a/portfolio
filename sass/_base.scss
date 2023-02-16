@@ -23,6 +23,25 @@ body {
   background-color: $background-color-500;
   color: $text-color;
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+#loading-overlay {
+  display: block;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: $background-color-500;
+  z-index: 99;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .nav {
