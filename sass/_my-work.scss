@@ -167,7 +167,7 @@
     &__desc {
       margin-bottom: 1.5rem;
       font-size: 0.875rem;
-      color: rgba($text-color, 0.6);
+      color: rgba($text-color, 0.55);
 
       @media only screen and (min-width: $bp-very-large) {
         margin-bottom: 2rem;
@@ -206,18 +206,19 @@
       svg {
         // Modified in app--number
         vertical-align: middle;
-      }
-  
-      &--live {
-        svg {
-          fill: rgba($text-color, 0.6);
+        fill: rgba($text-color, 0.55);
+        transition: fill 200ms ease;
+
+        @media only screen and (min-width: $bp-large) {
+          &:hover {
+            fill: $accent-color;
+          }
         }
       }
   
       &--source {
         svg {
           width: 2.3rem;
-          fill: rgba($text-color, 0.55);
         }
       }
     }
@@ -347,6 +348,7 @@
   }
 
   &__text {
+    cursor: default;
     margin-left: -4rem;
 
     @media only screen and (min-width: $bp-medium) {

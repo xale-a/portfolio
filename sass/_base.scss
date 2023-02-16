@@ -5,12 +5,11 @@ $background-color-300: #334756;
 
 $text-color: #EEEEEE;
 
-// $bp-medium: 34em;
-$bp-small-2: 30em;
-$bp-medium: 39.375em;
-$bp-medium-1: 32.5em;
-$bp-large: 71.5em;
-$bp-very-large: 107.87em;
+$bp-small-1: 30em;  // 480px
+$bp-small-2: 32.5em;  // 520px
+$bp-medium: 39.375em;  // 630px
+$bp-large: 71.5em;  // 1144px
+$bp-very-large: 107.875em; // 1726px
 
 *,
 *::before,
@@ -74,6 +73,11 @@ body {
 
     @media only screen and (min-width: $bp-large) {
       font-size: 1.25rem;
+      transition: color 200ms ease;
+
+      &:hover {
+        color: $accent-color;
+      }
     }
 
     @media only screen and (min-width: $bp-very-large) {
