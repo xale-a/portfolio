@@ -1,32 +1,31 @@
 .about-me {
   position: relative;
 
-  &::before {
-    // Background line
-    content: url(../img/lines/about-me-line-1.svg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    transform: translate(-55%, -30%);
+  &__line {
+    position: relative;
 
-    @media only screen and (min-width: $bp-small-1) {
-      transform: translate(-50%, -45%);
-    }
+    &::before {
+      content: url(../img/lines/about-me-line-1.svg);
+      position: absolute;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-55%, -47%);
 
-    @media only screen and (min-width: $bp-medium) {
-      content: url(../img/lines/about-me-line-2.svg);
-      transform: translate(-50%, -63.5%);
-    }
+      @media only screen and (min-width: $bp-medium) {
+        content: url(../img/lines/about-me-line-2.svg);
+        transform: translate(-50%, -62.5%);
+      }
 
-    @media only screen and (min-width: $bp-large) {
-      content: url(../img/lines/about-me-line-3.svg);
-      transform: translate(-50%, -50.5%);
-    }
+      @media only screen and (min-width: $bp-large) {
+        content: url(../img/lines/about-me-line-3.svg);
+        transform: translate(-63%, -51%);
+      }
 
-    @media only screen and (min-width: $bp-very-large) {
-      content: url(../img/lines/about-me-line-4.svg);
-      transform: translate(-50%, -54%);
+      @media only screen and (min-width: $bp-very-large) {
+        content: url(../img/lines/about-me-line-4.svg);
+        transform: translate(-58%, -56%);
+        // transform: translate(-57.5%, -56.5%);
+      }
     }
   }
 }
@@ -50,6 +49,13 @@
   }
 
   @media only screen and (min-width: $bp-large) {
+    padding: 1rem 1.7rem;
+    max-width: 42rem;
+  }
+
+  @media only screen and (min-width: $bp-very-large) {
+    margin-bottom: 5rem;
+    padding: 1.7rem;
     max-width: 44rem;
   }
 
@@ -57,8 +63,7 @@
     margin-left: 0.2rem;
     width: 8.5rem;
     border-radius: 50rem;
-    float: right;    
-
+    float: right;
 
     @media only screen and (min-width: $bp-medium) {
       width: 10.9rem;
@@ -92,11 +97,17 @@
   }
 
   @media only screen and (min-width: $bp-medium) {
-    max-width: 37.5rem;
     padding: 1.7rem;
+    max-width: 37.5rem;
   }
 
   @media only screen and (min-width: $bp-large) {
+    padding: 1rem 1.7rem;
+    max-width: 42rem;
+  }
+
+  @media only screen and (min-width: $bp-very-large) {
+    padding: 1.7rem;
     max-width: 44rem;
   }
 
@@ -109,19 +120,28 @@
       font-size: 2.3rem;
       margin-bottom: 1.4rem;
     }
+
+    @media only screen and (min-width: $bp-large) {
+      margin-bottom: 0.8rem;
+    }
+
+    @media only screen and (min-width: $bp-very-large) {
+      margin-bottom: 1.4rem;
+    }
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 4.5rem);
+    gap: 0.9rem;
     font-size: 0.875rem;
 
     @media only screen and (min-width: $bp-medium) {
-      gap: 2rem;
+      gap: 1.5rem;
       font-size: 0.94rem;
+      grid-template-columns: repeat(auto-fill, 5rem);
     }
-  
+
     & > div {
       display: flex;
       flex-direction: column;
@@ -129,7 +149,7 @@
       justify-content: flex-end;
       gap: 0.5rem;
     }
-  
+
     .fab {
       font-size: 2.8rem;
       color: rgba($text-color, 0.55);
@@ -138,7 +158,7 @@
         font-size: 4rem;
       }
     }
-  
+
     .skills__svg svg {
       width: 2.8rem;
       vertical-align: middle;
