@@ -3,7 +3,7 @@
 
   &::before {
     // Background line
-    content: url(../img/get-in-touch-line-1.svg);
+    content: url(../img/lines/get-in-touch-line-1.svg);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,17 +11,17 @@
     transform: translate(-47%, -27%);
 
     @media only screen and (min-width: $bp-medium) {
-      content: url(../img/get-in-touch-line-2.svg);
+      content: url(../img/lines/get-in-touch-line-2.svg);
       transform: translate(-46%, -25%);
     }
 
     @media only screen and (min-width: $bp-large) {
-      content: url(../img/get-in-touch-line-3.svg);
+      content: url(../img/lines/get-in-touch-line-3.svg);
       transform: translate(-45%, -58%);
     }
 
     @media only screen and (min-width: $bp-very-large) {
-      content: url(../img/get-in-touch-line-4.svg);
+      content: url(../img/lines/get-in-touch-line-4.svg);
       transform: translate(-60%, -56%);
     }
   }

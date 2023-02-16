@@ -1,32 +1,28 @@
 .home {
-  // --bottom: 8.3rem;
-  --bottom: 6rem;
   position: relative;
   padding-left: 2.2rem;
 
   &::before {
     // Background line
-    content: url(../img/home-line-1.svg);
+    content: url(../img/lines/home-line-1.svg);
     position: absolute;
     vertical-align: middle;
     top: 50%;
     left: 50vw;
-    width: 22rem; //? Check
     transform: translate(-50%, -16.2rem);
 
     @media only screen and (min-width: $bp-medium) {
-      content: url(../img/home-line-2.svg);
-      transform: translate(-87%, -17.5rem);
+      content: url(../img/lines/home-line-2.svg);
+      transform: translate(-53%, -17.5rem);
     }
 
     @media only screen and (min-width: $bp-large) {
-      content: url(../img/home-line-3.svg);
+      content: url(../img/lines/home-line-3.svg);
       transform: translate(-87%, -17.5rem);
-      width: unset; //? Check
     }
 
     @media only screen and (min-width: $bp-very-large) {
-      content: url(../img/home-line-4.svg);
+      content: url(../img/lines/home-line-4.svg);
       transform: translate(-87%, -49%);
     }
   }
@@ -73,7 +69,7 @@
 }
 
 .heading {
-  margin-bottom: calc(var(--bottom) - 1.7rem);
+  margin-bottom: 4.3rem;
   
   &__sub-heading {
     margin-bottom: 0.3rem;
@@ -116,7 +112,7 @@
     z-index: 1;
 
     &::after {
-      content: url('../img/reality-underline-1.svg');
+      content: url('../img/lines/reality-underline-1.svg');
       position: absolute;
       bottom: -1.6rem;
       left: 0;
@@ -124,18 +120,24 @@
       z-index: -1;
 
       @media only screen and (min-width: $bp-medium) {
-        content: url('../img/reality-underline-2.svg');
+        content: url('../img/lines/reality-underline-2.svg');
       }
 
       @media only screen and (min-width: $bp-large) {
-        content: url('../img/reality-underline-3.svg');
+        content: url('../img/lines/reality-underline-3.svg');
       }
 
       @media only screen and (min-width: $bp-very-large) {
-        content: url('../img/reality-underline-4.svg');
+        content: url('../img/lines/reality-underline-4.svg');
       }
     }
   }
+}
+
+@keyframes scroll {
+  from {transform: translate(0);}
+  50% {transform: translate(14%);}
+  to {transform: translate(0);}
 }
 
 .scroll-down {
@@ -162,6 +164,8 @@
   p {
     font-size: 0.875rem;
     text-transform: lowercase;
+    animation: scroll 3000ms infinite 1000ms;
+
 
     @media only screen and (min-width: $bp-medium) {
       font-size: 1.125rem;
